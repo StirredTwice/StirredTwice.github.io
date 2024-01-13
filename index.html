@@ -14,9 +14,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow-y: scroll; /* Add this line for vertical scroll */
-            height: 100vh; /* Set the height of the body to 100% of the viewport height */
-            background: linear-gradient(to bottom, #87CEEB, #1E90FF); /* Gradient from light blue to dark blue */
+            overflow-y: scroll;
+            height: 100vh;
+            background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+            transition: background 0.5s ease; /* Add a smooth transition effect */
         }
 
         header {
@@ -51,28 +52,30 @@
         <h2>Watch My Latest Songs</h2>
     </header>
 
-    <!-- First Facebook Video -->
     <div class="video-container">
         <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID_1" width="600" height="400"
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
 
-    <!-- Second Facebook Video -->
     <div class="video-container">
         <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID_2" width="600" height="400"
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
 
-    <!-- third Facebook Video -->
     <div class="video-container">
         <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID_3" width="600" height="400"
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
-    
-    <!-- Add more video containers as needed -->
 
     <script>
-        // You can add JavaScript code here if needed
+        document.addEventListener('scroll', function () {
+            // Calculate the scroll percentage
+            const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) /
+                (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+            // Set the background gradient based on the scroll percentage
+            document.body.style.background = `linear-gradient(to bottom, #87CEEB, #1E90FF ${scrollPercentage * 100}%, #1E90FF)`;
+        });
     </script>
 </body>
 

@@ -1,57 +1,21 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Facebook Videos</title>
+</head>
+<body>
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+<!-- Replace 'VIDEO_URL_1', 'VIDEO_URL_2', etc., with your actual Facebook video URLs -->
 
-   .parallax-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+<iframe src="https://www.facebook.com/plugins/video.php?href=VIDEO_URL_1" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 
-    .parallax-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom right, #00008B, #00ffff); /* Fading cyan to white */
-        transform: translate(0%, 0%);
-    }
+<iframe src="https://www.facebook.com/plugins/video.php?href=VIDEO_URL_2" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 
-    .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    text-align: center;
-    color: #fff;
-    width: 100%; /* Set width to 100% */
-    max-width: 600px;
-    margin: 0 auto;
-}
-    
-   
-</style>
+<iframe src="https://www.facebook.com/plugins/video.php?href=VIDEO_URL_3" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 
-<div class="parallax-container" style="width: 100%;">
-    <div class="parallax-bg"></div>
-    <div class="content">
-    <hr width= 50%>
-        <!-- Your content goes here -->
-        <h1>Stirred Twice</h1>
-        <p>Home Page</p>
-        
-        <!-- Facebook video iframe -->
-        <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID" frameborder="0" allowfullscreen="true"></iframe>
-    </div>
-</div>
+<!-- Add more iframe elements for additional videos -->
 
+</body>
+</html>

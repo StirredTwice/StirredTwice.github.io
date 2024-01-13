@@ -16,7 +16,6 @@
             align-items: center;
             overflow-y: scroll;
             height: 100vh;
-            background: linear-gradient(to bottom, #87CEEB, #1E90FF);
             transition: background 0.5s ease; /* Add a smooth transition effect */
         }
 
@@ -70,8 +69,7 @@
     <script>
         document.addEventListener('scroll', function () {
             // Calculate the scroll percentage
-            const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) /
-                (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            const scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
 
             // Set the background gradient based on the scroll percentage
             document.body.style.background = `linear-gradient(to bottom, #87CEEB, #1E90FF ${scrollPercentage * 100}%, #1E90FF)`;

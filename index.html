@@ -28,6 +28,9 @@
             width: 100%;
             top: 0; /* Position it at the top */
             z-index: 1000; /* Set a higher z-index to ensure it's above other elements */
+            display: flex;
+            justify-content: space-between; /* Align social media buttons to the right */
+            padding: 1em;
         }
 
         h1 {
@@ -42,6 +45,17 @@
             color: #666;
         }
 
+        .social-media-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-media-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
         .video-container {
               margin: 20px auto;
         }
@@ -51,7 +65,11 @@
 <body>
     <header>
         <h1>Stirred Twice</h1>
-        <h2>Watch My Latest Songs</h2>
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com/your_facebook_page" target="_blank">Facebook</a>
+            <a href="https://twitter.com/your_twitter_account" target="_blank">Twitter</a>
+            <!-- Add more social media buttons as needed -->
+        </div>
     </header>
 
     <div class="video-container">

@@ -11,14 +11,11 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            overflow-y: scroll;
-            height: 200vh; /* Increase the height to make scrolling more noticeable */
-            background: linear-gradient(to bottom, #00ffff, #00008b);
-            background-attachment: fixed;
-            background-size: cover;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-y: scroll; /* Add this line for vertical scroll */
+            height: 100vh; /* Set the height of the body to 100% of the viewport height */
         }
 
         header {
@@ -27,7 +24,9 @@
             text-align: center;
             padding: 1em 0;
             width: 100%;
-            top: 0;
+            position: fixed; /* Set the header to a fixed position */
+            top: 0; /* Position it at the top */
+            z-index: 1000; /* Set a higher z-index to ensure it's above other elements */
         }
 
         h1 {
@@ -43,7 +42,7 @@
         }
 
         .video-container {
-            margin: 20px auto;
+            margin: 80px auto; /* Add margin to the top of video containers to prevent overlap with fixed header */
         }
     </style>
 </head>
@@ -71,7 +70,7 @@
         <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID_3" width="600" height="400"
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
-
+    
     <!-- Add more video containers as needed -->
 
     <script>

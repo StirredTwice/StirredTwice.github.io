@@ -10,13 +10,13 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 50px 0 0; /* Add padding to the top of the body */
-            overflow-y: scroll;
-            height: 100vh;
-            background: linear-gradient(to bottom, #00ffff, #00008b); /* Gradient from cyan to dark blue */
+            padding: 0;
             display: flex;
+            background: linear-gradient(to bottom, #00ffff, #00008b); /* Gradient from cyan to dark blue */
             flex-direction: column;
             align-items: center;
+            overflow-y: scroll; /* Add this line for vertical scroll */
+            height: 100vh; /* Set the height of the body to 100% of the viewport height */
         }
 
         header {
@@ -63,12 +63,12 @@
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
 
-    <!-- Third Facebook Video -->
+    <!-- third Facebook Video -->
     <div class="video-container">
         <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID_3" width="600" height="400"
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
-
+    
     <!-- Add more video containers as needed -->
 
     <script>

@@ -16,7 +16,6 @@
             align-items: center;
             overflow-y: scroll; /* Add this line for vertical scroll */
             height: 100vh; /* Set the height of the body to 100% of the viewport height */
-            background: linear-gradient(to bottom, #87CEEB, #1E90FF); /* Gradient from light blue to dark blue */
         }
 
         header {
@@ -25,6 +24,7 @@
             text-align: center;
             padding: 1em 0;
             width: 100%;
+            z-index: 1; /* Ensure header is on top of the background */
         }
 
         h1 {
@@ -39,6 +39,17 @@
             color: #666;
         }
 
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+            z-index: 0; /* Ensure background is behind other elements */
+            pointer-events: none; /* Allow click-through to other elements */
+        }
+
         .video-container {
             margin: 20px auto;
         }
@@ -46,6 +57,8 @@
 </head>
 
 <body>
+    <div class="background"></div> <!-- Background container -->
+
     <header>
         <h1>Stirred Twice</h1>
         <h2>Watch My Latest Songs</h2>
@@ -63,12 +76,12 @@
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
 
-    <!-- third Facebook Video -->
+    <!-- Third Facebook Video -->
     <div class="video-container">
         <iframe src="https://www.facebook.com/video/embed?video_id=YOUR_VIDEO_ID_3" width="600" height="400"
             frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
     </div>
-    
+
     <!-- Add more video containers as needed -->
 
     <script>
